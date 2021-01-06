@@ -5,9 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping("/employee")
+/*
+если аннотацию указать над самим контроллером,
+сервер выдаст 404, но если добавить в адрес то,
+что указано в аннотации ("/employee"), тогда всё заработает
+*/
 public class MyController {
 
     @RequestMapping("/")
@@ -19,23 +24,6 @@ public class MyController {
     public String askEmployeeDetails() {
         return "ask-emp-details-view";
     }
-
-//    @RequestMapping("showDetails")
-//    public String showEmpDetails(){
-//        return "show-emp-details-view";
-//    }
-
-//    @RequestMapping("showDetails")
-//    public String showEmpDetails(HttpServletRequest request, Model model) {
-//
-//        String empName = request.getParameter("employeeName");
-//        empName = "Mr. " + empName;
-//        model.addAttribute("nameAttribute", empName);
-//
-//        model.addAttribute("description", " - instructor");
-//
-//        return "show-emp-details-view";
-//    }
 
 
     @RequestMapping("showDetails")
