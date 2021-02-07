@@ -20,6 +20,8 @@ public class Employee {
 
     private Map<String, String> carBrands;
 
+    private String[] languages;
+
 
     public Employee() {
         departments = new HashMap<>();
@@ -88,6 +90,14 @@ public class Employee {
 
     public void setCarBrands(Map<String, String> carBrands) {
         this.carBrands = carBrands;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
     }
 
     @Override
