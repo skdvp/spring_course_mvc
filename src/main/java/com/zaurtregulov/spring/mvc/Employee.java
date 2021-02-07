@@ -1,5 +1,6 @@
 package com.zaurtregulov.spring.mvc;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -10,7 +11,7 @@ public class Employee {
 
     @Size(min=2,message = "name mast be min 2 symbols")
     private String name;
-    @NotEmpty(message = "surname is required fields")
+    @NotBlank(message = "surname is required fields")
     private String surname;
 
     private int salary;
