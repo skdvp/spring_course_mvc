@@ -1,5 +1,8 @@
 package com.zaurtregulov.spring.mvc;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
 
 
@@ -10,6 +13,8 @@ public class Employee {
     private int salary;
 
     private String department;
+
+    private Map<String, String> departments;
 
     public Employee() {
     }

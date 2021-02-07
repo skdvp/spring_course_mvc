@@ -2,9 +2,7 @@ package com.zaurtregulov.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -16,12 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 */
 public class MyController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String showFirstView() {
         return "first-view";
     }
 
-    @RequestMapping("/askDetails")
+    @GetMapping("/askDetails")
     public String askEmployeeDetails(Model model) {
 
 //        Employee emp = new Employee();
@@ -36,7 +34,7 @@ public class MyController {
     }
 
 
-    @RequestMapping("/showDetails")
+    @PostMapping("/showDetails")
     public String showEmpDetails(@ModelAttribute("employee") Employee emp) {
 
         String name = emp.getName();
