@@ -19,6 +19,8 @@
     <form:errors path="surname"/>
     <br><br>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
+
     <br><br>
     Department <form:select path="department">
     <form:options items="${employee.departments}"/>
